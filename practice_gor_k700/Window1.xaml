@@ -1,0 +1,39 @@
+﻿<Window x:Class="practice_gor_k700.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:practice_gor_k700"
+        mc:Ignorable="d"
+        Title="Главное меню" Height="450" Width="800" Background="DarkBlue" Icon="C:\Users\arbuz\Desktop\test\practice\Logo1.png">
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Menu VerticalAlignment="Top" Height="20" Width="150" >
+                <MenuItem Header="DA" >
+                    <MenuItem Header="yes"/>
+                </MenuItem>
+            </Menu>
+            <Label Background="Yellow" Content="" Name="NameOfWorker" 
+               Grid.Column="0" Grid.Row="0" Height="55" Width="150"
+               HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </StackPanel>
+        <Image Source="C:\Users\arbuz\Desktop\test\practice\Logo.png" Grid.Column="2"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Label Content="??" Background="Red" Height="25" Width="150" HorizontalAlignment="Left"/>
+            <Button Grid.Column="1" Grid.Row="1" Height="40" Width="150" Click="Watch" HorizontalAlignment="Left" Content="??"/>
+        </StackPanel>
+    </Grid>
+</Window>
