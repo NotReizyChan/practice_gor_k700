@@ -24,12 +24,11 @@ namespace practice_gor_k700
         {
             InitializeComponent();
             context = new prac_gotEntities();
-            //NameOfWorker = context.Worker.ToList().Find(FIO);
         }
 
-        private void Watch(object sender, RoutedEventArgs e)
+        private void ShowMasters(object sender, RoutedEventArgs e)
         {
-
+            MastersFrame.Navigate(new MastersPage());
         }
     }
 }

@@ -29,6 +29,17 @@ namespace practice_gor_k700
 
         public int MyProperty { get; set; }
 
+        public string TitlePosition { get
+            {
+
+                if (position == null)
+                    return "";
+                else
+                    return Position1.title;
+
+            }
+                }   
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Device> Device { get; set; }
         public virtual Position Position1 { get; set; }

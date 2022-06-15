@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:practice_gor_k700"
         mc:Ignorable="d"
-        Title="Вход" Height="450" Width="800" Background="DarkBlue" Icon="C:\Users\arbuz\Desktop\test\practice\Logo1.png">
+        Title="Вход" Height="450" Width="800" Background="DarkBlue" Icon="C:\Users\arbuz\source\repos\practice_gor_k700\practice\Logo1.png">
     <Grid>
         <Grid.RowDefinitions >
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -16,14 +16,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="2" >
-            <Image Source="C:\Users\arbuz\Desktop\test\practice\Logo.png" RenderTransformOrigin="0.464,0.948" Height="109"/>
+        <StackPanel Grid.Row="0" Grid.Column="2"  >
+            <Image Source="C:\Users\arbuz\Desktop\test\practice\Logo.png" />
         </StackPanel>
-
         <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2">
             <Label Content="Логин"  HorizontalAlignment="Center" FontStyle="Italic" FontSize="21" Foreground="Red"/>
             <TextBox Width="220" Name="LoginWorker"/>
