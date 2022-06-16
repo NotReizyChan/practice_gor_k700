@@ -1,0 +1,41 @@
+﻿<Page x:Class="practice_gor_k700.ClientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:practice_gor_k700"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ClientPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Клиенты" BorderBrush="Yellow" BorderThickness="5" FontSize="30" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="2" Grid.Row="1" Margin="10" Height="50" BorderBrush="Black" BorderThickness="3" x:Name="Clientbox" TextChanged="Namechanged"/>
+        <Label Content="Введите ФИО для поиска:" FontSize="18" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <DataGrid Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="LightGray" x:Name="ClientGrid" Height="250">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Табельный номер" Width="*" Binding="{Binding Num}"/>
+                <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="Серия" Width="*" Binding="{Binding serialPass}"/>
+                <DataGridTextColumn Header="Номер паспорта" Width="*" Binding="{Binding numberPas}"/>
+                <DataGridTextColumn Header="Номер телефона" Width="*" Binding="{Binding phone}"/>
+            </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Редактировать" Click="EditClients"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+    </Grid>
+</Page>

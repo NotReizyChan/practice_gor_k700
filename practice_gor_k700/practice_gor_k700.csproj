@@ -67,11 +67,20 @@
     <Compile Include="AddMaster.xaml.cs">
       <DependentUpon>AddMaster.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChngeClient.xaml.cs">
+      <DependentUpon>ChngeClient.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Client.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ClientPage.xaml.cs">
+      <DependentUpon>ClientPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Device.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DevicePage.xaml.cs">
+      <DependentUpon>DevicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="DevicePart.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -128,6 +137,18 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Page Include="AddMaster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChngeClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DevicePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

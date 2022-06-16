@@ -30,5 +30,15 @@ namespace practice_gor_k700
         {
             MastersFrame.Navigate(new MastersPage());
         }
+
+        private void ShowClients(object sender, RoutedEventArgs e)
+        {
+            MastersFrame.Navigate(new ClientPage());
+        }
+
+        private void ShowRequest(object sender, RoutedEventArgs e)
+        {
+            MastersFrame.Navigate(new DevicePage());
+        }
     }
 }

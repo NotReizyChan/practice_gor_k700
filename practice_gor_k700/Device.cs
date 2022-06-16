@@ -30,7 +30,14 @@ namespace practice_gor_k700
         public int client { get; set; }
     
         public virtual Client Client1 { get; set; }
-        public virtual Type Type1 { get; set; }
+        public virtual Type Type1 { get; set; }//НОУТБУК, СМАРТФОН. КОМПУТЕР И ТД
+        
+        public string TitleType { get
+            {
+                    return Type1.Title;
+            }
+        }
+
         public virtual Types Types { get; set; }
         public virtual Worker Worker { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

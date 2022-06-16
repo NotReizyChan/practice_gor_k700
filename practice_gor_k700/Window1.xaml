@@ -17,8 +17,8 @@
             <StackPanel>
                 <Image Source="C:\Users\arbuz\Desktop\test\practice\Logo.png" Margin="10"/>
                 <Button Margin="7" Height="35" Content="Мастера" Click="ShowMasters"/>
-                <Button Margin="7" Height="35" Content="Клиенты"/>
-                <Button Margin="7" Height="35" Content="Заказы"/>
+                <Button Margin="7" Height="35" Content="Клиенты" Click="ShowClients"/>
+                <Button Margin="7" Height="35" Content="Заказы" Click="ShowRequest"/>
             </StackPanel>
         </Grid>
 
