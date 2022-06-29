@@ -48,5 +48,10 @@ namespace practice_gor_k700
         {
             Refresher();
         }
+
+        private void AddClients(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddClient(context));
+        }
     }
 }

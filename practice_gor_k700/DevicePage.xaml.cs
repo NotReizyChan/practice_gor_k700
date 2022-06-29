@@ -56,5 +56,10 @@ namespace practice_gor_k700
         {
             Refresher();
         }
+
+        private void AddDevice(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddDevicePage(context));
+        }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:practice_gor_k700"
         mc:Ignorable="d"
-        Title="Главное меню" Height="450" Width="800" Icon="C:\Users\arbuz\Desktop\test\practice\Logo1.png">
+        Title="Главное меню" Height="550" Width="800" Icon="C:\Users\arbuz\Desktop\test\practice\Logo1.png" Closed="ClosedWindow">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -16,9 +16,12 @@
             <Border BorderBrush="Black" BorderThickness="4"/>
             <StackPanel>
                 <Image Source="C:\Users\arbuz\Desktop\test\practice\Logo.png" Margin="10"/>
-                <Button Margin="7" Height="35" Content="Мастера" Click="ShowMasters"/>
-                <Button Margin="7" Height="35" Content="Клиенты" Click="ShowClients"/>
-                <Button Margin="7" Height="35" Content="Заказы" Click="ShowRequest"/>
+                <Button Margin="7" Height="35" Content="Мастера" Click="ShowMasters" Name="MastersButton"/>
+                <Button Margin="7" Height="35" Content="Клиенты" Click="ShowClients" Name="ClientsButton"/>
+                <Button Margin="7" Height="35" Content="Заказы" Click="ShowRequest" Name="RequestButton"/>
+                <Button Margin="7" Height="35" Content="Детали" Click="ShowParts" Name="PartsButton"/>
+                <Button Margin="7" Height="35" Content="Сводка" Click="ShowSvod" Name="SvodButton"/>
+                <Button Margin="7" Height="35" Content="Результаты диагностики" Click="FirstDiagnostic" Name="DiagnosticButton"/>
             </StackPanel>
         </Grid>
 

@@ -1,0 +1,55 @@
+﻿<Page x:Class="practice_gor_k700.AddDevicePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:practice_gor_k700"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddDevicePage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.ColumnSpan="2" Margin="7" Content="Добавление оборудования" HorizontalAlignment="Center" FontSize="25"/>
+
+        <Label Grid.Column="0" Grid.Row="1" Margin="7" Content="Номер" HorizontalAlignment="Right" FontSize="25"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="7" Name="NumberOfDevice"/>
+
+        <Label Grid.Column="0" Grid.Row="2" Margin="7" Content="Типо Оборудования" HorizontalAlignment="Right" FontSize="25"/>
+        <ComboBox Grid.Column="1" Grid.Row="2" Margin="7" Name="TypeOfDevice" DisplayMemberPath="Title"/>
+
+        <Label Grid.Column="0" Grid.Row="3" Margin="7" Content="Модель" HorizontalAlignment="Right" FontSize="25"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="7" Name="ModelOfDevice"/>
+
+        <Label Grid.Column="0" Grid.Row="4" Margin="7" Content="Повреждения" HorizontalAlignment="Right" FontSize="25"/>
+        <TextBox Grid.Column="1" Grid.Row="4" Margin="7" Name="DamageOfDevice"/>
+
+        <Label Grid.Column="0" Grid.Row="5" Margin="7" Content="Жалобы" HorizontalAlignment="Right" FontSize="25"/>
+        <TextBox Grid.Column="1" Grid.Row="5" Margin="7" Name="ComplaintOfDevice"/>
+
+        <Label Grid.Column="0" Grid.Row="6" Margin="7" Content="Мастер" HorizontalAlignment="Right" FontSize="25"/>
+        <ComboBox Grid.Column="1" Grid.Row="6" Margin="7" Name="FioOfMaster" DisplayMemberPath="FIO"/>
+        
+        <Label Grid.Column="0" Grid.Row="7" Margin="7" Content="Клиент" HorizontalAlignment="Right" FontSize="25"/>
+        <ComboBox Grid.Column="1" Grid.Row="7" Margin="7" Name="FioOfClient" DisplayMemberPath="name"/>
+
+        <Button Name="SaveRequest" Click="SaveReq" Grid.ColumnSpan="2" Grid.Row="8" Margin="7" Width="250" Content="Сохранить"/>
+
+    </Grid>
+</Page>

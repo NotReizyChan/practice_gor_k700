@@ -38,6 +38,17 @@ namespace practice_gor_k700
             }
         }
 
+        public string FIOworker { get {
+
+                return Worker.FIO;
+            } }
+
+        public string ClientName { get {
+
+                return Client1.name;
+            } }
+
+
         public virtual Types Types { get; set; }
         public virtual Worker Worker { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

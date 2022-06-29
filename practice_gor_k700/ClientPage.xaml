@@ -23,7 +23,7 @@
         <Label Content="Клиенты" BorderBrush="Yellow" BorderThickness="5" FontSize="30" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <TextBox Grid.Column="2" Grid.Row="1" Margin="10" Height="50" BorderBrush="Black" BorderThickness="3" x:Name="Clientbox" TextChanged="Namechanged"/>
         <Label Content="Введите ФИО для поиска:" FontSize="18" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-        <DataGrid Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="LightGray" x:Name="ClientGrid" Height="250">
+        <DataGrid Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="LightGray" x:Name="ClientGrid" Height="250" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Табельный номер" Width="*" Binding="{Binding Num}"/>
                 <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding name}"/>
@@ -37,5 +37,6 @@
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
+        <Button Grid.Row="5" Grid.ColumnSpan="2" Margin="25" Width="175" Content="Добавить" Click="AddClients"/>
     </Grid>
 </Page>

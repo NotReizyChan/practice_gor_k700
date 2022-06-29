@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,20 @@ namespace practice_gor_k700
     public partial class Window1 : Window
     {
         prac_gotEntities context;
-        public Window1()
+        MainWindow window;
+        public Window1(Worker worker, MainWindow window)
         {
             InitializeComponent();
+            if(worker.position == 2)
+            {
+                RequestButton.Visibility = Visibility.Collapsed;
+                PartsButton.Visibility = Visibility.Collapsed;
+                MastersButton.Visibility = Visibility.Collapsed;
+
+            }
             context = new prac_gotEntities();
+            window.Visibility = Visibility.Collapsed;
+            this.window = window;
         }
 
         private void ShowMasters(object sender, RoutedEventArgs e)
@@ -39,6 +50,26 @@ namespace practice_gor_k700
         private void ShowRequest(object sender, RoutedEventArgs e)
         {
             MastersFrame.Navigate(new DevicePage());
+        }
+
+        private void ShowParts(object sender, RoutedEventArgs e)
+        {
+            MastersFrame.Navigate(new PartsPage());
+        }
+
+        private void ShowSvod(object sender, RoutedEventArgs e)
+        {
+            MastersFrame.Navigate(new SvodPage());
+        }
+
+        private void ClosedWindow(object sender, EventArgs e)
+        {
+            window.Close();
+        }
+
+        private void FirstDiagnostic(object sender, RoutedEventArgs e)
+        {
+            MastersFrame.Navigate(new DiagnosticResultPage(context));
         }
     }
 }

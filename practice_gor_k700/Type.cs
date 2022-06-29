@@ -22,7 +22,15 @@ namespace practice_gor_k700
     
         public int id { get; set; }
         public string Title { get; set; }
-    
+
+        public string TitleType
+        {
+            get
+            {
+                return   Title;
+            }
+        }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Device> Device { get; set; }
     }

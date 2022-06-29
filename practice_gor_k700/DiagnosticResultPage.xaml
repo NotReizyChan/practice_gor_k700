@@ -1,0 +1,39 @@
+﻿<Page x:Class="practice_gor_k700.DiagnosticResultPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:practice_gor_k700"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DiagnosticResultPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" Margin="7" Content="Результаты диагностики"/>
+
+        <Label Content="Номер диагностики" Grid.Column="0"  Grid.Row="1" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="7" Name="IdDiagnostic"/>
+
+        <Label Content="Оборудование" Grid.Column="0"  Grid.Row="2" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <ComboBox Grid.Column="1" Grid.Row="2" Margin="7" Name="DeviceNameDiagnostic" DisplayMemberPath="model"/>
+
+        <Label Content="Комментарий" Grid.Column="0"  Grid.Row="3" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="7" Name="CommentBox"/>
+
+        <Button Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="5" Margin="7" Click="saveDiagnostic" Width="250" Content="Сохранить"/>
+
+    </Grid>
+</Page>

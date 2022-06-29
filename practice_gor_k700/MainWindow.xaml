@@ -31,5 +31,6 @@
             <Label/>
             <Button Width="250" Height="25" Content="Войти" Click="EnterInSys"/>
         </StackPanel>
+        <Button Grid.Column="2" Grid.Row="3" Margin="10"  Height="25" Content="Показать пароль" Click="showPass" Name="passShow"/>
     </Grid>
 </Window>

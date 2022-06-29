@@ -25,10 +25,13 @@ namespace practice_gor_k700
         public string title { get; set; }
         public int count { get; set; }
         public decimal cost { get; set; }
-    
+        public byte[] image { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PartsToRepair> PartsToRepair { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SpecificationsOfPart> SpecificationsOfPart { get; set; }
+
+ 
     }
 }

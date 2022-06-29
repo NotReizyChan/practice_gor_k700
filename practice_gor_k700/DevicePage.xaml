@@ -25,15 +25,17 @@
         <Label Grid.Column="1" Grid.Row="1" Content="Выберите тип оборудования"/>
         <TextBox Grid.Column="0" Grid.Row="2" x:Name="Equipbox" TextChanged="EquipboxChanged" Margin="10"/>
         <ComboBox Grid.Column="1" Grid.Row="2" x:Name='EquipTypebox' DisplayMemberPath="Title" SelectionChanged="ChangingType" Margin="10"/>
-        <DataGrid Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Background="LightGray" x:Name="DeviceGrid" Height="250">
+        <DataGrid Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" AutoGenerateColumns="False" Background="LightGray" x:Name="DeviceGrid" Height="250" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Табельный номер" Width="*" Binding="{Binding tabNum}"/>
-                <DataGridTextColumn Header="ФИО" Width="*" Binding="{Binding FIO}"/>
-                <DataGridTextColumn Header="Должность" Width="*" Binding="{Binding TitlePosition}"/>
-                <DataGridTextColumn Header="Оклад" Width="*" Binding="{Binding oklad}"/>
-                <DataGridTextColumn Header="Процент от ремонта" Width="*" Binding="{Binding percentToRepair}"/>
-                <DataGridTextColumn Header="Пароль" Width="*" Binding="{Binding password}"/>
+                <DataGridTextColumn Header="Номер" Width="*" Binding="{Binding id}"/>
+                <DataGridTextColumn Header="Тип" Width="*" Binding="{Binding TitleType}"/>
+                <DataGridTextColumn Header="Модель" Width="*" Binding="{Binding model}"/>
+                <DataGridTextColumn Header="Повреждения" Width="*" Binding="{Binding damage}"/>
+                <DataGridTextColumn Header="Жалобы" Width="*" Binding="{Binding complaint}"/>
+                <DataGridTextColumn Header="Мастер" Width="*" Binding="{Binding FIOworker}"/>
+                <DataGridTextColumn Header="Клиент" Width="*" Binding="{Binding ClientName}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Grid.ColumnSpan="2" Grid.Row="4" Margin="7" Width="200" Name="addDevice" Click="AddDevice" Content="Добавить заказ"/>
     </Grid>
 </Page>

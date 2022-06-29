@@ -25,6 +25,10 @@ namespace practice_gor_k700
         public int serialPass { get; set; }
         public int numberPas { get; set; }
         public decimal phone { get; set; }
+
+        public string NameClient { get { 
+            return name; 
+            } }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Device> Device { get; set; }
